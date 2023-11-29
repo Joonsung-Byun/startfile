@@ -119,6 +119,7 @@ body {
   font-size: 16px;
   font-weight: 300;
   min-width: 320px;
+  overflow-x: hidden;
 }
 
 /* HEADER  */
@@ -153,6 +154,7 @@ nav {
   background-color: slateblue;
   right: 0;
   transform: translateX(100%);
+  transition: all 0.5s ease;
 }
 nav ul li {
   border-bottom: 1px solid rgba(255, 255, 255, 0.25);
@@ -163,6 +165,11 @@ nav ul li a {
   text-decoration: none;
   padding: 0.6rem;
   color: white;
+}
+
+nav.open {
+  transform: translateX(0%);
+  transition: all 0.5s ease;
 }
 
 /* MAIN  */
@@ -202,6 +209,21 @@ footer a {
 
 @media only screen and (min-width: 35rem) {
   /* NAVIGATION STUFF GOES HERE  */
+  #btn {
+    display: none;
+  }
+  nav {
+    transform: translateX(0%);
+    position: relative;
+    transition: none;
+  }
+  nav ul {
+    display: flex;
+    justify-content: flex-end;
+  }
+  nav.open {
+    transition: none;
+  }
 }
 @media only screen and (min-width: 64rem) {
   header, nav, main {

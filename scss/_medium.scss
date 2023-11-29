@@ -1,1 +1,21 @@
 /* NAVIGATION STUFF GOES HERE  */
+
+#btn {
+    display: none;
+
+}
+
+nav {
+    transform: translateX(0%);
+    position: relative;
+    transition: none;
+    ul {
+        display: flex;
+        justify-content: flex-end;
+    }
+}
+
+nav.open {
+    transition: none;
+}
+

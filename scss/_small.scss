@@ -10,6 +10,7 @@ body {
 	font-size: 16px;
 	font-weight: $lightWeight;
     min-width: 320px;
+    overflow-x: hidden;
 }
 
 
@@ -46,6 +47,7 @@ nav {
     background-color: slateblue;
     right: 0;
     transform:translateX(100%);
+    transition: all .5s ease;
     ul li {
         border-bottom: 1px solid rgba(255, 255, 255, 0.25);
     }
@@ -56,6 +58,11 @@ nav {
         padding: .6rem;
         color: white;
     }
+}
+
+nav.open {
+    transform: translateX(0%);
+    transition: all .5s ease;
 }
 
 
